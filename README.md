@@ -1,98 +1,37 @@
-# Zoo-Keeper-App
-Python program demonstrating OOP inheritance via a zoo management system. Features include animal classes with unique behaviors and attributes, such as Mammals, Birds, and Reptiles, derived from a base Animal class. The project showcases polymorphism and encapsulation, simulating feeding schedules, habitat details, and animal-specific traits.
+# Zookeeper Schedule Manager
 
-# ZooKeeper Management System
+A Python console application for staff schedules, enclosure feeding times, keeper check-in, and feeding reports. The implementation models zookeepers and schedules.
 
-A Python program demonstrating object-oriented programming (OOP) principles such as inheritance, polymorphism, and encapsulation through a zoo management system. The program models various animal species and their unique behaviors, simulating real-world interactions within a zoo.
+## Run locally
 
----
+Requires Python 3.10 or later. No third-party packages are needed.
 
-## Features
+```bash
+git clone https://github.com/FuaadBashi/Zoo-Keeper-App.git
+cd Zoo-Keeper-App
+```
 
-- **Animal Hierarchy:**
-  - Base `Animal` class with shared attributes and behaviors.
-  - Specialized subclasses for specific types, such as `Mammals`, `Birds`, and `Reptiles`.
+Create `zoo_schedule.csv` beside `main.py` with semicolon-separated rows and **no header**. For example, this fictional record contains keeper ID, name, enclosure, morning feed, afternoon feed, and shift start:
 
-- **Encapsulation:**
-  - Private and protected attributes to maintain integrity.
-  - Getter and setter methods to access animal-specific details.
+```text
+K001;Alex;Lions;09:00:00;16:00:00;08:00:00
+```
 
-- **Polymorphism:**
-  - Shared methods implemented differently for each subclass (e.g., feeding schedules and sounds).
+Then run:
 
-- **Zoo Simulation:**
-  - Feeding schedules for different animals.
-  - Habitat information and animal-specific traits.
+```bash
+python3 main.py
+```
 
----
+## Code to explore
 
-## Project Structure
+[main.py](main.py) contains `Zookeeper`, `ZooSchedule`, and `ZooControl`, plus time validation and late-check-in logging.
 
-- **`Animal` Class:**
-  - Serves as the base class for all animals, defining common attributes like name, age, and species.
+## Current behavior
 
-- **`Mammals`, `Birds`, and `Reptiles` Classes:**
-  - Extend the `Animal` class and implement unique behaviors.
+- Schedules are loaded from the local file; it is not included in the repository.
+- Late check-ins append to `late_checkin.csv`.
+- Lateness currently compares the hour component only.
+- Feeding reports print a confirmation; they are not persisted.
 
-- **Simulation Functions:**
-  - Handle feeding schedules, habitat management, and animal interaction.
-
----
-
-## How to Run
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/zookeeper-management.git
-   cd zookeeper-management
-   ```
-
-2. **Run the Program:**
-   ```bash
-   python3 zooKeeperOOPInheritance.py
-   ```
-
-3. **Follow the CLI Prompts:**
-   - Explore animal data.
-   - Simulate feeding or manage habitat details.
-
----
-
-## Example Usage
-
-- Display animal details:
-  ```
-  Name: Leo
-  Species: Lion
-  Age: 5
-  Feeding Schedule: Twice daily
-  ```
-
-- Add a new animal to the zoo:
-  ```
-  Enter animal name: Polly
-  Enter species: Parrot
-  Enter age: 2
-  Habitat: Tropical
-  ```
-
-- Simulate feeding:
-  ```
-  Feeding all animals...
-  Leo (Lion) is being fed.
-  Polly (Parrot) is being fed.
-  ```
-
----
-
-## Technologies Used
-
-- Python 3.10+
-- Object-Oriented Programming (OOP)
-
----
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
+These boundaries make the project suitable for exploring file input, inheritance, and console workflows.
