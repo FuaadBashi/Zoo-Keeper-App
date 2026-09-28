@@ -1,0 +1,14 @@
+[project]
+name = "zoo-keeper"
+version = "1.0.0"
+description = "Zookeeper schedule manager: feeding times, check-ins and feed records."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
