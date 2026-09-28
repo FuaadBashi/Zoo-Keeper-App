@@ -1,0 +1,6 @@
+keeper_id;name;enclosure;feed_am;feed_pm;start_time
+K001;Alex;Lions;09:00:00;16:00:00;08:00:00
+K002;Priya;Penguins;08:30:00;15:30:00;07:30:00
+K003;Tom;Giraffes;10:00:00;17:00:00;09:00:00
+K004;Sara;Reptiles;11:00:00;18:00:00;10:00:00
+K005;Omar;Elephants;07:45:00;14:45:00;07:00:00
